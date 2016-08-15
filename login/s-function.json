@@ -4,7 +4,7 @@
   "description": "Serverless Lambda function for project: serverless-jwt-example",
   "customName": false,
   "customRole": false,
-  "handler": "handler.handler",
+  "handler": "serverless-jwt-example/login/handler.handler",
   "timeout": 6,
   "memorySize": 1024,
   "authorizer": {},
@@ -14,15 +14,13 @@
   "endpoints": [
     {
       "path": "login",
-      "method": "GET",
+      "method": "POST",
       "type": "AWS",
       "authorizationType": "none",
       "authorizerFunction": false,
       "apiKeyRequired": false,
       "requestParameters": {},
-      "requestTemplates": {
-        "application/json": ""
-      },
+      "requestTemplates": "$${apiRequestTemplate}",
       "responses": {
         "400": {
           "statusCode": "400"
@@ -33,9 +31,7 @@
           "responseModels": {
             "application/json;charset=UTF-8": "Empty"
           },
-          "responseTemplates": {
-            "application/json;charset=UTF-8": ""
-          }
+          "responseTemplates": "$${apiResponseTemplate}"
         }
       }
     }

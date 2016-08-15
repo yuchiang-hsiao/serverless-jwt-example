@@ -1,0 +1,12 @@
+{
+    "apiRequestTemplate": {
+        "application/json": {
+            "sessionToken": "$input.params('sessionToken')"
+        }
+    },
+    "apiResponseTemplate": {
+        "application/json": {
+            "body": "$input.json('$')"
+        }
+    }
+}

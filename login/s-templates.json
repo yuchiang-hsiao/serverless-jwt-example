@@ -1,0 +1,12 @@
+{
+    "apiRequestTemplate": {
+        "application/json": {
+            "body": "$input.json('$')"
+        }
+    },
+    "apiResponseTemplate": {
+        "application/json": {
+            "body": "$input.json('$')"
+        }
+    }
+}
