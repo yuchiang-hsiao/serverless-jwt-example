@@ -4,7 +4,7 @@
   "description": "Serverless Lambda function for project: serverless-jwt-example",
   "customName": false,
   "customRole": false,
-  "handler": "serverless-jwt-example/login/handler.handler",
+  "handler": "serverless-jwt-example/check/handler.handler",
   "timeout": 6,
   "memorySize": 1024,
   "authorizer": {},
